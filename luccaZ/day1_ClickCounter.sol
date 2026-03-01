@@ -13,8 +13,16 @@ contract ClickCounter {
     counter = 0;
   }
 
-  function decrement() public {
+  function decrease() public {
     counter--;
+  }
+
+  function getCounter() public view returns (uint256){
+    return(counter);
+  }
+
+  function clickMultiple(uint256 times) public {
+    counter *= times;
   }
 
 }

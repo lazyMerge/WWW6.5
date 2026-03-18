@@ -1,6 +1,6 @@
 # Solidity学习互动演示GUI开发工作流程 Skill
 
-> 文档版本：20260318 (Day 16 已添加)
+> 文档版本：20260319 (Day 17 已添加)
 
 ## 项目概述
 
@@ -38,7 +38,8 @@ GUI/
 │   │       ├── Day13/ERC20TokenAdvanced.vue
 │   │       ├── Day14/SafeDeposit.vue      # 抽象合约 + 接口 + 工厂模式
 │   │       ├── Day15/GasEfficientVoting.vue # Gas 优化技术
-│   │       └── Day16/PluginStore.vue      # 插件存储系统 + 动态调用
+│   │       ├── Day16/PluginStore.vue      # 插件存储系统 + 动态调用
+│   │       └── Day17/UpgradeHub.vue       # 可升级合约 + 代理模式
 │   ├── composables/               # 组合式函数
 │   │   ├── useDay1.js
 │   │   ├── useDay2.js
@@ -47,7 +48,8 @@ GUI/
 │   │   ├── useDay13.js
 │   │   ├── useDay14.js            # SafeDeposit 业务逻辑
 │   │   ├── useDay15.js            # GasEfficientVoting 业务逻辑
-│   │   └── useDay16.js            # PluginStore 业务逻辑 + ABI 编码
+│   │   ├── useDay16.js            # PluginStore 业务逻辑 + ABI 编码
+│   │   └── useDay17.js            # UpgradeHub 业务逻辑 + 升级机制
 │   ├── data/
 │   │   ├── concepts.js            # 概念定义
 │   │   └── days.js                # 日程配置（核心配置）
@@ -83,7 +85,8 @@ contracts: {
   day13: { tokenName, tokenSymbol, totalSupply, balances, allowances, userAddress },  // ERC20 + virtual 函数
   day14: { depositBoxes, eventLog, boxCounter, currentRole, currentAddress },  // 抽象合约 + 接口 + 工厂模式
   day15: { proposals, proposalCounter, votesCast, storageBits, userAddress, eventLog },  // Gas 优化技术
-  day16: { profiles, plugins, pluginData, currentUser, pluginCounter }  // 插件存储系统 + 动态调用
+  day16: { profiles, plugins, pluginData, currentUser, pluginCounter },  // 插件存储系统 + 动态调用
+  day17: { plans, subscriptions, currentVersion, isUpgraded, paused }  // 可升级合约 + 代理模式
 }
 
 // progressStore.js - 学习进度（自动从 dayConfigs 生成）

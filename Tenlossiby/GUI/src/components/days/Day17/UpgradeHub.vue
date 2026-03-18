@@ -286,7 +286,7 @@
             <div v-else class="empty-state">
               暂无订阅
             </div>
-            <button class="day-action-btn small" @click="handleCheckSubscription"
+            <button class="day-action-btn blue small" @click="handleCheckSubscription"
               :disabled="!hasSubscription">
               🔍 查询状态
             </button>
@@ -477,7 +477,7 @@ const handleArchitectureClick = () => {
   if (!unlockedConcepts.value.includes('proxy_pattern')) {
     progressStore.unlockConcept(17, 'proxy_pattern')
     currentHint.value = '🔄 代理模式将数据存储与逻辑执行分离！👉 点击 delegatecall 说明来学习如何实现委托调用！'
-    showMessage('🎉 恭喜解锁：代理模式！')
+    showMessage('✅ 已查看合约架构图！🎉 恭喜解锁：代理模式！代理合约持有数据，逻辑合约处理业务逻辑。👉 点击 delegatecall 说明按钮！')
   }
 }
 
@@ -486,7 +486,7 @@ const showDelegatecallExplanation = () => {
   if (!unlockedConcepts.value.includes('delegatecall')) {
     progressStore.unlockConcept(17, 'delegatecall')
     currentHint.value = '📦 delegatecall 在代理合约存储上下文中执行逻辑代码！👉 点击存储布局说明了解变量顺序的重要性！'
-    showMessage('🎉 恭喜解锁：委托调用！')
+    showMessage('✅ 已学习 delegatecall 机制！🎉 恭喜解锁：委托调用！这是实现可升级合约的核心技术。👉 点击存储布局说明按钮！')
   }
 }
 
@@ -495,7 +495,7 @@ const showStorageLayoutExplanation = () => {
   if (!unlockedConcepts.value.includes('storage_layout')) {
     progressStore.unlockConcept(17, 'storage_layout')
     currentHint.value = '🔀 存储布局必须保持一致，否则升级后数据错乱！👉 切换到 Owner 身份，创建第一个订阅计划！'
-    showMessage('🎉 恭喜解锁：存储布局！')
+    showMessage('✅ 已了解存储布局！🎉 恭喜解锁：存储布局！变量顺序决定了数据在存储中的位置，升级时必须保持一致。👉 切换到 Owner 身份创建计划！')
   }
 }
 

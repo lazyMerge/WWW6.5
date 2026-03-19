@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 //创建了一个虚假的天气数据预言机，其作用类似于 Chainlink 数据馈送
 
 //AggregatorV3Interface: 这是 Chainlink 的标准预言机接口——在我们的例子中模拟降雨等数据
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 //Ownable: OpenZeppelin 的一个助手，它为我们提供了所有权功能——包括owner()和onlyOwner 修饰符
 import "@openzeppelin/contracts/access/Ownable.sol";
 

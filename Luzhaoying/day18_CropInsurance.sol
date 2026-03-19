@@ -4,7 +4,10 @@ pragma solidity ^0.8.19;
 
 //该合约模拟了基于区块链的农作物保险计划。农民可以支付少量溢价，如果降雨量低于阈值，他们会自动获得报酬
 
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+//import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
+// 新路径（尝试这个）
+import "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract CropInsurance is Ownable {
